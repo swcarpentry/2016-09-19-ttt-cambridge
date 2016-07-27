@@ -16,6 +16,17 @@ contact: "lg390@cam.ac.uk"
 etherpad: # optional: URL for the workshop Etherpad if there is one
 ---
 
+<!-- See instructions in the comments below for how to edit specific sections of this workshop template. -->
+
+<!--
+  HEADER
+
+  Edit the values in the block above to be appropriate for your workshop.
+  If the value is not 'true', 'false', 'null', or a number, please use
+  double quotation marks around the value, unless specified otherwise.
+  And run 'tools/check' *before* committing to make sure that changes are good.
+-->
+
 <!--
   EVENTBRITE
 
@@ -43,8 +54,8 @@ etherpad: # optional: URL for the workshop Etherpad if there is one
   the pitch.
 -->
 <p>
-  <a href="https://software-carpentry.org">Software Carpentry</a>
-  and <a href="https://datacarpentry.org">Data Carpentry</a>'s mission is to
+  <a href="{{ site.swc_site }}">Software Carpentry</a>
+  and <a href="{{ site.dc_site }}">Data Carpentry</a>'s mission is to
   help scientists and engineers get more research done in less time
   and with less pain by teaching them basic lab skills for scientific
   computing.  This hands-on two-day workshop covers the basics of
@@ -59,7 +70,7 @@ etherpad: # optional: URL for the workshop Etherpad if there is one
   need any particular technical background, and we will not be
   teaching that. This workshop is based on the constantly revised and
   updated
- <a href="https://swcarpentry.github.io/instructor-training/">curriculum</a>.
+ <a href="{{ site.training_site }}">curriculum</a>.
 </p>
 
 <p>
@@ -91,7 +102,6 @@ etherpad: # optional: URL for the workshop Etherpad if there is one
 </p>
 {% endif %}
 
-
 <p>
   <strong>Requirements:</strong> Participants should bring a laptop
   that is Internet connected and has a functioning browser.  If you
@@ -105,14 +115,14 @@ etherpad: # optional: URL for the workshop Etherpad if there is one
   Please note that after this course is over, you will be asked to do
   three short follow-up exercises online in order to finish qualifying
   as an instructor: the details are available at
-  <a href="http://swcarpentry.github.io/instructor-training/checkout/">http://swcarpentry.github.io/instructor-training/checkout/</a>.
+  <a href="{{ site.training_site }}/checkout/">{{ site.training_site }}/checkout/</a>.
   If you have any questions about the workshop, the reading material,
   or anything else, please get in touch.
 </p>
 <p align="center">
   <em>
     All participants are required to abide by Software
-    Carpentry's <a href="https://software-carpentry.org/conduct.html">Code of Conduct</a>.
+    Carpentry's <a href="{{ site.swc_site }}/conduct/">Code of Conduct</a>.
   </em>
 </p>
 
@@ -149,8 +159,8 @@ etherpad: # optional: URL for the workshop Etherpad if there is one
   Please read the following before the workshop begins:
 </p>
 <ol>
-  <li><a href="https://swcarpentry.github.io/instructor-training//papers/porter-what-works-2013.pdf">Success in Introductory Programming: What Works?</a></li>
-  <li><a href="https://swcarpentry.github.io/instructor-training//papers/science-of-learning-2015.pdf">The Science of Learning</a></li>
+  <li><a href="{{ site.training_site }}/papers/porter-what-works-2013.pdf">Success in Introductory Programming: What Works?</a></li>
+  <li><a href="{{ site.training_site }}/papers/science-of-learning-2015.pdf">The Science of Learning</a></li>
 </ol>
 <p>
   Please also read through <em>one</em> of the episodes below
@@ -161,20 +171,20 @@ etherpad: # optional: URL for the workshop Etherpad if there is one
   <div class="col-md-6">
     <p><strong>Data Carpentry</strong></p>
     <ul>
-      <li><a href="http://www.datacarpentry.org/OpenRefine-ecology-lesson/01-working-with-openrefine.html">Faceting and Clustering in OpenRefine</a></li>
-      <li><a href="http://www.datacarpentry.org/sql-ecology-lesson/01-sql-basic-queries.html">Basic Queries in SQL</a></li>
-      <li><a href="http://www.datacarpentry.org/R-ecology-lesson/02-starting-with-data.html">Starting with Data in R</a></li>
-      <li><a href="http://www.datacarpentry.org/python-ecology-lesson/01-starting-with-data">Starting with Data in Python</a></li>
+      <li><a href="{{ site.dc_site }}/OpenRefine-ecology-lesson/01-working-with-openrefine.html">Faceting and Clustering in OpenRefine</a></li>
+      <li><a href="{{ site.dc_site }}/sql-ecology-lesson/01-sql-basic-queries.html">Basic Queries in SQL</a></li>
+      <li><a href="{{ site.dc_site }}/R-ecology-lesson/02-starting-with-data.html">Starting with Data in R</a></li>
+      <li><a href="{{ site.dc_site }}/python-ecology-lesson/01-starting-with-data">Starting with Data in Python</a></li>
     </ul>
   </div>
   <div class="col-md-6">
     <p><strong>Software Carpentry</strong></p>
     <ul>
-      <li><a href="http://swcarpentry.github.io/shell-novice/02-create.html">Working with Files and Directories in the Unix Shell</a></li>
-      <li><a href="http://swcarpentry.github.io/git-novice/04-changes.html">Tracking Changes in Git</a></li>
-      <li><a href="http://swcarpentry.github.io/sql-novice-survey/01-select.html">Selecting Data in SQL</a></li>
-      <li><a href="http://swcarpentry.github.io/python-novice-inflammation/02-loop.html">Repeating Actions with Loops in Python</a></li>
-      <li><a href="http://swcarpentry.github.io/r-novice-gapminder/05-data-structures-part2.html">Exploring Data Frames in R</a></li>
+      <li><a href="{{ site.swc_pages }}/shell-novice/03-create/">Working with Files and Directories in the Unix Shell</a></li>
+      <li><a href="{{ site.swc_pages }}/git-novice/04-changes/">Tracking Changes in Git</a></li>
+      <li><a href="{{ site.swc_pages }}/sql-novice-survey/01-select/">Selecting Data in SQL</a></li>
+      <li><a href="{{ site.swc_pages }}/python-novice-inflammation/02-loop/">Repeating Actions with Loops in Python</a></li>
+      <li><a href="{{ site.swc_pages }}/r-novice-gapminder/05-data-structures-part2/">Exploring Data Frames in R</a></li>
     </ul>
   </div>
 </div>
@@ -184,52 +194,42 @@ etherpad: # optional: URL for the workshop Etherpad if there is one
 <h2>Schedule</h2>
 
 <p>
-  Please see <a href="https://swcarpentry.github.io/instructor-training/">the course materials website</a> for course material.
+  Please see <a href="{{ site.training_site }}">this site</a> for course material.
 </p>
 
 <div class="row">
   <div class="col-md-6">
     <h3>Day 1</h3>
     <table class="table table-striped">
-      <tr><td>09:00</td><td>Welcome: key concepts and training goals</td></tr>
-      <tr><td>09:30</td><td>Novice mind-set; formative vs. summative assessment</td></tr>
-      <tr><td></td><td><em>Exercise: multiple choice questions</em></td></tr>
-      <tr><td>10:30</td><td>Coffee</td></tr>
-      <tr><td>10:45</td><td>Lesson study; giving feedback</td></tr>
-      <tr><td></td><td><em>Exercise: video recorded teaching</em></td></tr>
-      <tr><td>11:45</td><td>Morning wrap-up (minute cards)</td></tr>
-      <tr><td>12:00</td><td>Lunch</td></tr>
-      <tr><td>13:00</td><td>Concept maps</td></tr>
-      <tr><td></td><td><em>Exercise: draw and critique concept maps</em></td></tr>
-      <tr><td>14:15</td><td>Coffee</td></tr>
-      <tr><td>14:30</td><td>Learning objectives</td></tr>
-      <tr><td></td><td><em>Exercise: write and critique learning objectives</em></td></tr>
-      <tr><td>15:15</td><td>Cognitive load</td></tr>
-      <tr><td>15:30</td><td><em>Exercise: faded example</em></td></tr>
-      <tr><td>15:45</td><td>Wrap-up (one up, one down)</td></tr>
-      <tr><td>16:00</td><td>Close</td></tr>
-      <tr><td></td><td><em>Homework: read operations guide</em></td></tr>
+      <tr> <td>09:00</td> <td>Welcome</td> </tr>
+      <tr> <td>09:10</td> <td>Introduction</td> </tr>
+      <tr> <td>09:40</td> <td>Novices and Formative Assessment</td> </tr>
+      <tr> <td>10:40</td> <td>Morning Coffee</td> </tr>
+      <tr> <td>10:55</td> <td>Teaching as a Performance Art</td> </tr>
+      <tr> <td>11:55</td> <td>Morning Wrap-Up</td> </tr>
+      <tr> <td>12:10</td> <td>Lunch</td> </tr>
+      <tr> <td>13:10</td> <td>Expertise and Memory</td> </tr>
+      <tr> <td>14:25</td> <td>Afternoon Coffee</td> </tr>
+      <tr> <td>14:40</td> <td>Performance Revised</td> </tr>
+      <tr> <td>15:25</td> <td>Cognitive Load</td> </tr>
+      <tr> <td>16:05</td> <td>Afternoon Wrap-Up</td> </tr>
+      <tr> <td>16:20</td> <td>Finish</td> </tr>
     </table>
   </div>
   <div class="col-md-6">
     <h3>Day 2</h3>
     <table class="table table-striped">
-      <tr><td>09:00</td><td>Live coding demonstration</td></tr>
-      <tr><td></td><td><em>Exercise: live coding practice</em></td></tr>
-      <tr><td>10:15</td><td>Coffee</td></tr>
-      <tr><td>10:30</td><td>Review questions about operations guide</td></tr>
-      <tr><td>11:15</td><td><em>Exercise: create workshop website</em></td></tr>
-      <tr><td>11:45</td><td>Wrap-up (minute cards)</td></tr>
-      <tr><td>12:00</td><td>Lunch</td></tr>
-      <tr><td>13:00</td><td>Data Carpentry</td></tr>
-      <tr><td>13:30</td><td>Motivators and demotivators</td></tr>
-      <tr><td>14:00</td><td><em>Exercise: demotivational stories</em></td></tr>
-      <tr><td>14:30</td><td>Coffee break</td></tr>
-      <tr><td>14:45</td><td>Assessment</td></tr>
-      <tr><td></td><td><em>Exercise: formulate assessment plans</em></td></tr>
-      <tr><td>15:30</td><td>Checkout procedure</td></tr>
-      <tr><td>15:45</td><td>Wrap-up (one up, one down)</td></tr>
-      <tr><td>16:00</td><td>Close</td></tr>
+      <tr> <td>09:00</td> <td>Live Coding</td> </tr>
+      <tr> <td>10:15</td> <td>Morning Coffee</td> </tr>
+      <tr> <td>10:30</td> <td>The Carpentries</td> </tr>
+      <tr> <td>11:30</td> <td>Carpentry Teaching Practices</td> </tr>
+      <tr> <td>12:00</td> <td>Morning Wrap-Up</td> </tr>
+      <tr> <td>12:15</td> <td>Lunch</td> </tr>
+      <tr> <td>13:15</td> <td>Motivation and Demotivation</td> </tr>
+      <tr> <td>14:00</td> <td>Lessons and Objectives</td> </tr>
+      <tr> <td>15:00</td> <td>Afternoon Coffee</td> </tr>
+      <tr> <td>15:15</td> <td>Afternoon Wrap-Up</td> </tr>
+      <tr> <td>16:00</td> <td>Finish</td> </tr>
     </table>
   </div>
 </div>
